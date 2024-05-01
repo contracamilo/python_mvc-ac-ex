@@ -56,6 +56,13 @@ class TaskView:
         description = simpledialog.askstring("Entrada", "Descripción:")
         return title, description
 
+    def get_task_id(self):
+        try:
+            return int(simpledialog.askstring("Entrada", "ID de la tarea:"))
+        except (ValueError, TypeError):
+            messagebox.showerror("Error", "ID inválido.")
+            return None
+
     def get_task_index(self):
         try:
             return int(simpledialog.askstring("Entrada", "Número de la tarea:"))
