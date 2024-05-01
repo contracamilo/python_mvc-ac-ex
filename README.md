@@ -1,4 +1,4 @@
-# python mvc
+# Python mvc
 
 ## Descripción 
 
@@ -13,21 +13,23 @@ El proyecto está estructurado de la siguiente manera:
 - `controller/`: Contiene la lógica de control del proyecto. Incluye la definición de la clase `TaskController`.
 - `main.py`: Es el punto de entrada de la aplicación.
 
+```bash
 mvc_python/
 │
 ├── model/
-│   ├── __init__.py  
+│   ├── __init__.py  # Para hacer que el directorio sea un módulo
 │   └── model.py     # Contiene las clases `Task` y `TaskList`
 │
 ├── view/
-│   ├── __init__.py  
+│   ├── __init__.py  # Para hacer que el directorio sea un módulo
 │   └── view.py      # Contiene la clase `TaskView` para la GUI de Tkinter
 │
 ├── controller/
-│   ├── __init__.py 
+│   ├── __init__.py  # Para hacer que el directorio sea un módulo
 │   └── controller.py # Contiene la clase `TaskController`
 │
-└── main.py  # Punto de entrada de la aplicación
+└── main.py          # Punto de entrada de la aplicación
+```
 
 
 ## Uso
@@ -42,3 +44,4 @@ Para ejecutar el proyecto, sigue estos pasos:
 git clone https://github.com/criveraapex/python_mvc-ac-ex.git
 cd python_mvc-ac-ex
 python main.py
+```
