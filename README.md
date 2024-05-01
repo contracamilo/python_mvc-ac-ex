@@ -1,5 +1,9 @@
 # Python mvc
 
+<img width="578" alt="Screenshot 2024-05-01 at 12 39 41 PM" src="https://github.com/contracamilo/python_mvc-ac-ex/assets/27745159/74d79a50-071d-4f20-be65-68847df87d6f">
+
+<img width="580" alt="Screenshot 2024-05-01 at 12 40 00 PM" src="https://github.com/contracamilo/python_mvc-ac-ex/assets/27745159/9187a235-f7d9-47be-9ec0-d3a62b15c78f">
+
 ## Descripción 
 
 Este proyecto es una aplicación de lista de tareas implementada en Python utilizando el patrón de diseño Modelo-Vista-Controlador (MVC). 
@@ -17,15 +21,15 @@ El proyecto está estructurado de la siguiente manera:
 mvc_python/
 │
 ├── model/
-│   ├── __init__.py  # Para hacer que el directorio sea un módulo
+│   ├── __init__.py  
 │   └── model.py     # Contiene las clases `Task` y `TaskList`
 │
 ├── view/
-│   ├── __init__.py  # Para hacer que el directorio sea un módulo
+│   ├── __init__.py  
 │   └── view.py      # Contiene la clase `TaskView` para la GUI de Tkinter
 │
 ├── controller/
-│   ├── __init__.py  # Para hacer que el directorio sea un módulo
+│   ├── __init__.py 
 │   └── controller.py # Contiene la clase `TaskController`
 │
 └── main.py          # Punto de entrada de la aplicación
