@@ -23,10 +23,14 @@ class TaskView:
         btn_frame = tk.Frame(self.root)
         btn_frame.pack()
 
-        tk.Button(btn_frame, text="Agregar", command=self.add_task).pack(side=tk.LEFT)
-        tk.Button(btn_frame, text="Editar", command=self.edit_task).pack(side=tk.LEFT)
-        tk.Button(btn_frame, text="Eliminar", command=self.delete_task).pack(side=tk.LEFT)
-        tk.Button(btn_frame, text="Completar", command=self.mark_completed).pack(side=tk.LEFT)
+        tk.Button(btn_frame, text="Agregar", command=self.add_task, height=2, width=10, padx=10, pady=10).pack(
+            side=tk.LEFT)
+        tk.Button(btn_frame, text="Editar", command=self.edit_task, height=2, width=10, padx=10, pady=10).pack(
+            side=tk.LEFT)
+        tk.Button(btn_frame, text="Eliminar", command=self.delete_task, height=2, width=10, padx=10, pady=10).pack(
+            side=tk.LEFT)
+        tk.Button(btn_frame, text="Completar", command=self.mark_completed, height=2, width=10, padx=10, pady=10).pack(
+            side=tk.LEFT)
 
     def update_view(self, tasks):
         self.task_listbox.delete(0, tk.END)
@@ -44,8 +48,9 @@ class TaskView:
         self.controller.edit_task(index, title, description)
 
     def delete_task(self):
-        index = self.get_task_index()
-        self.controller.delete_task(index)
+        task_id = self.get_task_id()
+        if task_id is not None:
+            self.controller.delete_task(task_id)
 
     def mark_completed(self):
         index = self.get_task_index()

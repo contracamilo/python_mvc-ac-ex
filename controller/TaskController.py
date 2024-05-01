@@ -26,8 +26,14 @@ class TaskController:
         else:
             self.view.show_error("Título no puede estar vacío.")
 
-    def delete_task(self):
-        task_id = self.view.get_task_id()
+
+
+    def edit_task(self, index, title, description):
+        if index is not None:
+            self.task_list.edit_task(index, title, description)
+            self.update_view()
+
+    def delete_task(self, task_id):
         if task_id is not None:
             try:
                 self.task_list.remove_task(task_id)
